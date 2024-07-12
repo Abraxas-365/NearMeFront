@@ -2,7 +2,8 @@ import { join } from 'path'
 import type { Config } from 'tailwindcss'
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
-import { skeleton } from '@skeletonlabs/tw-plugin'
+import { skeleton } from '@skeletonlabs/tw-plugin';
+import { nearme } from './src/nearme'
 
 export default {
 	darkMode: 'class',
@@ -15,11 +16,8 @@ export default {
 		typography,
 		skeleton({
 			themes: {
-				preset: [
-					{
-						name: 'hamlindigo',
-						enhancements: true,
-					},
+				custom: [
+					nearme,
 				],
 			},
 		}),
